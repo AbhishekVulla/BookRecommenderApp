@@ -2,12 +2,12 @@ import streamlit as st
 import pandas as pd
 import io
 
-# Load CSV (Make sure the filename matches exactly!)
+# Load CSV
 books = pd.read_csv('Books.csv')
 
 st.title("📚 Book Recommender for Al Khor Community Library")
 
-# Welcome Message
+# Welcome message
 st.markdown("""
 Welcome to the **Book Recommender for Al Khor Community Library**!  
 Use the filters below to find books by genre and age group.
@@ -27,10 +27,9 @@ if genres and age:
 
     st.subheader("📖 Your Book Recommendations:")
 
-    # Display each recommended book
     for _, book in filtered_books.iterrows():
+        st.image(book['Cover Image URL'], width=120)
         st.markdown(f"""
-        ---
         ### 📘 {book['Book Title']}
         **Author:** {book['Author']}  
         **Genre:** {book['Genre(s)']}  
@@ -39,7 +38,7 @@ if genres and age:
         _{book['Short Description']}_  
         """)
 
-    # Optional: Add download button for results
+    # Optional: Download filtered recommendations
     csv = filtered_books.to_csv(index=False).encode('utf-8')
     st.download_button("📥 Download recommendations as CSV", csv, "recommended_books.csv", "text/csv")
 
