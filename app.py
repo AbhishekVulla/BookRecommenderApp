@@ -5,20 +5,24 @@ import io
 # Load CSV
 books = pd.read_csv('Books.csv')
 
-st.title("📚 Book Recommender for Al Khor Community Library")
+# 🖼️ AKC Logo
+st.image("https://www.akcommunity.org/Portals/0/akcommunity_logo.png", width=200)
 
-# Welcome message
+# Title & Intro
+st.title("📚 Book Recommender for Al Khor Community Library")
 st.markdown("""
-Welcome to the **Book Recommender for Al Khor Community Library**!  
-Use the filters below to find books by genre, age group, or search by title/author.
+Welcome to our community-powered book discovery tool!  
+Explore our library collection by selecting genres, age groups, or searching by author/title.  
 """)
 
-# Filters
-genres = st.multiselect("Choose genres:", options=books['Genre(s)'].unique())
-age = st.selectbox("Select your age group:", options=books['Age Group'].unique())
-search_query = st.text_input("🔍 Search by book title or author")
+# 🧠 Sidebar Filters
+with st.sidebar:
+    st.header("🔍 Filter Books")
+    genres = st.multiselect("Choose genres:", options=books['Genre(s)'].unique())
+    age = st.selectbox("Select your age group:", options=books['Age Group'].unique())
+    search_query = st.text_input("Search by book title or author")
 
-# Apply filters
+# 🔍 Filtering logic
 if genres and age:
     filtered_books = books[
         books['Genre(s)'].str.contains('|'.join(genres), case=False) &
@@ -33,18 +37,21 @@ if genres and age:
 
     filtered_books = filtered_books.sort_values(by='Popularity Score', ascending=False)
 
-    st.subheader("📖 Your Book Recommendations:")
+    # 📘 Section Divider
+    st.markdown("""---  
+    ### 📘 Your Book Recommendations  
+    """)
 
     for _, book in filtered_books.iterrows():
-        # Display cover image or fallback
+        # Cover image or fallback
         if pd.notna(book['Cover Image URL']):
             st.image(book['Cover Image URL'], width=120)
         else:
             st.image("https://via.placeholder.com/120x180.png?text=No+Cover", width=120)
 
-        # Display book details
+        # Book Info
         st.markdown(f"""
-        ### 📘 {book['Book Title']}
+        ### 📖 {book['Book Title']}
         **Author:** {book['Author']}  
         **Genre:** 🏷️ `{book['Genre(s)']}`  
         **Age Group:** {book['Age Group']}  
@@ -52,9 +59,19 @@ if genres and age:
         _{book['Short Description']}_  
         """)
 
-    # Download filtered list
+    # 📥 Download button
     csv = filtered_books.to_csv(index=False).encode('utf-8')
-    st.download_button("📥 Download recommendations as CSV", csv, "recommended_books.csv", "text/csv")
+    st.download_button("⬇️ Save My Reading List", csv, "recommended_books.csv", "text/csv")
+
+    # 💡 Suggestion Note
+    st.markdown("💡 Have a favorite book to suggest? Let the librarian or volunteer team know!")
 
 else:
-    st.info("Please select at least one genre and an age group.")
+    st.info("Please select at least one genre and an age group from the sidebar.")
+
+# ✍️ Footer
+st.markdown("""
+---
+Made with ❤️ by **Abhishek Vulla**, AKC Youth Volunteer  
+Empowering our readers — one book at a time.  
+""")
