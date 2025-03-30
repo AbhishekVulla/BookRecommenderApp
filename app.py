@@ -5,9 +5,6 @@ import io
 # Load CSV
 books = pd.read_csv('Books.csv')
 
-# 🖼️ Optional AKC Banner or Logo
-st.image("https://www.akcommunity.org/Portals/0/akcommunity_logo.png", width=200)
-
 # Title & Intro
 st.title("📚 Book Recommender for Al Khor Community Library")
 st.markdown("""
@@ -41,14 +38,14 @@ if genres and age:
     st.subheader("📖 Your Book Recommendations:")
 
     for _, book in filtered_books.iterrows():
-        # 📕 Show cover or fallback
+        # Show cover or fallback
         image_url = book['Cover Image URL']
         if pd.notna(image_url) and image_url.strip() != "":
             st.image(image_url, width=120)
         else:
             st.image("https://via.placeholder.com/120x180.png?text=No+Cover", width=120)
 
-        # 📘 Book details
+        # Book details
         st.markdown(f"""
         ### {book['Book Title']}
         **Author:** {book['Author']}  
@@ -58,7 +55,7 @@ if genres and age:
         _{book['Short Description']}_  
         """)
 
-    # 📥 CSV download
+    # CSV download
     csv = filtered_books.to_csv(index=False).encode('utf-8')
     st.download_button("⬇️ Save My Reading List", csv, "recommended_books.csv", "text/csv")
 
@@ -66,10 +63,3 @@ if genres and age:
 
 else:
     st.info("Please select at least one genre and an age group from the sidebar.")
-
-# 🧡 Footer
-st.markdown("""
----
-Made with ❤️ by **Abhishek Vulla** – AKC Youth Volunteer  
-Bringing books closer to the community.  
-""")
