@@ -1,11 +1,11 @@
 Book Title,Author,Genre(s),Age Group,Popularity Score,Short Description,Cover Image URL
-The Martian,Andy Weir,Sci-Fi,Teens & Adults,5,A stranded astronaut fights to survive on Mars.,https://covers.openlibrary.org/b/isbn/9780553418026-M.jpg
-The Hobbit,J.R.R. Tolkien,Fantasy,Small Kids,4,A hobbit's adventure with dwarves to reclaim treasure.,https://covers.openlibrary.org/b/isbn/9780261102217-M.jpg
-Sherlock Holmes,Arthur Conan Doyle,Mystery,Teens & Adults,5,Detective stories full of intrigue and logic.,https://covers.openlibrary.org/b/isbn/9780451524935-M.jpg
-Educated,Tara Westover,Biography,Teens & Adults,4,A memoir about education and transformation.,https://covers.openlibrary.org/b/isbn/9780399590504-M.jpg
-Atomic Habits,James Clear,Self-Help,Teens & Adults,5,A guide to building better habits.,https://covers.openlibrary.org/b/isbn/9780735211292-M.jpg
-Sapiens,Yuval Noah Harari,History,Teens & Adults,4,Explores human history from evolution to the present.,https://covers.openlibrary.org/b/isbn/9780062316097-M.jpg
-1984,George Orwell,Dystopian,Teens & Adults,5,A chilling look at a dystopian surveillance state.,https://covers.openlibrary.org/b/isbn/9780451524935-M.jpg
-Ikigai,Héctor García,Philosophy,Teens & Adults,4,A Japanese philosophy for a long and happy life.,https://covers.openlibrary.org/b/isbn/9780143130727-M.jpg
-Steve Jobs,Walter Isaacson,Biography,Teens & Adults,5,Biography of the iconic Apple founder.,https://covers.openlibrary.org/b/isbn/9781451648539-M.jpg
-A Brief History of Time,Stephen Hawking,Science,Teens & Adults,5,Explains complex cosmology in simple language.,https://covers.openlibrary.org/b/isbn/9780553380163-M.jpg
+The Martian,Andy Weir,Sci-Fi,15+,5,A stranded astronaut fights to survive on Mars.,https://covers.openlibrary.org/b/isbn/9780553418026-M.jpg
+The Hobbit,J.R.R. Tolkien,Fantasy,12+,4,A hobbit's adventure with dwarves to reclaim treasure.,https://covers.openlibrary.org/b/isbn/9780261102217-M.jpg
+Sherlock Holmes,Arthur Conan Doyle,Mystery,14+,5,Detective stories full of intrigue and logic.,https://covers.openlibrary.org/b/isbn/9780451524935-M.jpg
+Educated,Tara Westover,Biography,16+,4,A memoir about education and transformation.,https://covers.openlibrary.org/b/isbn/9780399590504-M.jpg
+Atomic Habits,James Clear,Self-Help,15+,5,A guide to building better habits.,https://covers.openlibrary.org/b/isbn/9780735211292-M.jpg
+Sapiens,Yuval Noah Harari,History,16+,4,Explores human history from evolution to the present.,https://covers.openlibrary.org/b/isbn/9780062316097-M.jpg
+1984,George Orwell,Dystopian,15+,5,A chilling look at a dystopian surveillance state.,
+Ikigai,Héctor García,Philosophy,14+,4,A Japanese philosophy for a long and happy life.,
+Steve Jobs,Walter Isaacson,Biography,16+,5,Biography of the iconic Apple founder.,https://covers.openlibrary.org/b/isbn/9781451648539-M.jpg
+A Brief History of Time,Stephen Hawking,Science,17+,5,Explains complex cosmology in simple language.,https://covers.openlibrary.org/b/isbn/9780553380163-M.jpg
