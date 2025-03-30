@@ -43,12 +43,3 @@ It was developed as part of a volunteering initiative to enhance digital engagem
 
 No sign-up required. Works on both desktop and mobile browsers.
 
----
-
-## 📂 Dataset Structure
-
-The dataset (`Books.csv`) includes:
-
-| Book Title | Author | Genre(s) | Age Group | Popularity Score | Short Description |
-|------------|--------|----------|------------|------------------|--------------------|
-
